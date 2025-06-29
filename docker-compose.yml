@@ -46,7 +46,7 @@ services:
       - TZ=Asia/Kolkata # Set your timezone
       - SEARXNG_BASE_URL=https://searxng.mango-catla.ts.net/
     volumes:
-      - ./searxng:/etc/searxng:rw
+      - searxng-data:/etc/searxng:rw
     cap_drop:
       - ALL
     cap_add:
@@ -86,3 +86,4 @@ services:
 
 volumes:
   valkey-data2:
+  searxng-data:
